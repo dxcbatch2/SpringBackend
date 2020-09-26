@@ -6,7 +6,9 @@ import javax.persistence.Id;
 public class Marks {
 	@Id
 	int sid;
-	int eid;
+	private String sname;
+	private String eid;
+	private String ename;
 	private int sub1;
 	private int sub2;
 	private int sub3;
@@ -14,10 +16,12 @@ public class Marks {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Marks(int sid, int eid, int sub1, int sub2, int sub3) {
+	public Marks(int sid, String sname, String eid, String ename, int sub1, int sub2, int sub3) {
 		super();
 		this.sid = sid;
+		this.sname = sname;
 		this.eid = eid;
+		this.ename = ename;
 		this.sub1 = sub1;
 		this.sub2 = sub2;
 		this.sub3 = sub3;
@@ -28,11 +32,23 @@ public class Marks {
 	public void setSid(int sid) {
 		this.sid = sid;
 	}
-	public int getEid() {
+	public String getSname() {
+		return sname;
+	}
+	public void setSname(String sname) {
+		this.sname = sname;
+	}
+	public String getEid() {
 		return eid;
 	}
-	public void setEid(int eid) {
+	public void setEid(String eid) {
 		this.eid = eid;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
 	}
 	public int getSub1() {
 		return sub1;
@@ -54,8 +70,10 @@ public class Marks {
 	}
 	@Override
 	public String toString() {
-		return "Marks [sid=" + sid + ", eid=" + eid + ", sub1=" + sub1 + ", sub2=" + sub2 + ", sub3=" + sub3 + "]";
+		return "Marks [sid=" + sid + ", sname=" + sname + ", eid=" + eid + ", ename=" + ename + ", sub1=" + sub1
+				+ ", sub2=" + sub2 + ", sub3=" + sub3 + "]";
 	}
+	
 	
 
 }

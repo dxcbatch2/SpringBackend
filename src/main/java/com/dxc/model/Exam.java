@@ -5,21 +5,21 @@ import javax.persistence.Id;
 @Entity
 public class Exam {
 	@Id
-	private int eid;
+	private String eid;
 	private String ename;
 	public Exam() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Exam(int eid, String ename) {
+	public Exam(String eid, String ename) {
 		super();
 		this.eid = eid;
 		this.ename = ename;
 	}
-	public int getEid() {
+	public String getEid() {
 		return eid;
 	}
-	public void setEid(int eid) {
+	public void setEid(String eid) {
 		this.eid = eid;
 	}
 	public String getEname() {
